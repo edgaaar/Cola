@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/cola.dir/src/Nodo.cpp.o CMakeFiles/cola.dir/src/main.cpp.o CMakeFiles/cola.dir/src/Cola.cpp.o  -o cola -rdynamic 

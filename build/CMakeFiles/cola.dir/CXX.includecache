@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Cola.h
+Nodo.h
+../include/Nodo.h
+
+../include/Nodo.h
+iostream
+-
+
+/home/edgar/Programas/Cola/src/Cola.cpp
+Cola.h
+/home/edgar/Programas/Cola/src/Cola.h
+
+/home/edgar/Programas/Cola/src/Nodo.cpp
+Nodo.h
+/home/edgar/Programas/Cola/src/Nodo.h
+
+/home/edgar/Programas/Cola/src/main.cpp
+Cola.h
+/home/edgar/Programas/Cola/src/Cola.h
+
