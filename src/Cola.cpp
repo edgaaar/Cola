@@ -1,11 +1,13 @@
 #include "Cola.h"
 
+//Constructor vacío. Crea una cola de elementos nulos.
 Cola::Cola()
 {
 	this->H=NULL;
 	this->T=NULL;
 }
 
+//Constructor que recibe el dato del primer nodo que se creará.
 Cola::Cola(int Dato)
 {
 	Nodo * aux= new Nodo(Dato);
@@ -13,6 +15,7 @@ Cola::Cola(int Dato)
 	this->T=aux;
 }
 
+//Verifica si la cola está vacía, de así serlo regresa TRUE
 bool Cola::ColaVacia()
 {
 	if (this->H == NULL && this->T == NULL)
@@ -20,6 +23,7 @@ bool Cola::ColaVacia()
 	return false;
 }
 
+//Muestra los elementos contenidos en la cola.
 void Cola::Show()
 {
 	Nodo* aux = this->H;
@@ -30,6 +34,7 @@ void Cola::Show()
 	}
 }
 
+//Añade un elemento a la cola.
 void Cola::Push(int Dato)
 {
 	Nodo* aux = new Nodo(Dato);
@@ -43,6 +48,7 @@ void Cola::Push(int Dato)
 	}
 }
 
+//Elimina el primer elemento de la cola (FIFO), regresa el dato removido.
 int Cola::Pop(void)
 {
 	if(!ColaVacia())
@@ -56,19 +62,9 @@ int Cola::Pop(void)
 	}	
 }
 
-/*Nodo* Cola::BuscarElemento(int Dato)
-{
-	if(!ColaVacia())
-	{
-		Nodo* aux = H;
-		while(aux->getDato()!=Dato && aux != NULL)
-			aux = aux->getSig();
-		return aux;
-	}
-}*/
-
+//Asigna a H y a T como elementos nulos. Se obtiene una cola vacía.
 void Cola::VaciarCola(void)
 {
-	H = NULL;
-	T = H;
+	this->H = NULL;
+	this->T = NULL;
 }
